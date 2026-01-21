@@ -19,6 +19,6 @@ print(f"Para pagar uma casa de {casa} de R${casa:.2f} em {tempo} anos")
 print(f"a prestação será de R${prestacao:.2f}")
 
 if prestacao <= minimo:
-    print("Emprestimo pode ser CONCEDIDO!")
+    print("\033[1;32mEmprestimo pode ser CONCEDIDO!\033[m")
 else:
-    print("\033[0;41mEmprestimo NEGADO\033[m!")
+    print("\033[0;41mEmprestimo NEGADO!\033[m")
