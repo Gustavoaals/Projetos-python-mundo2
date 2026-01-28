@@ -10,9 +10,18 @@ idade = ano_atual - ano_nasc
 
 print(f"Quem nasceu em {ano_nasc} tem {idade} anos ")
 
-if idade < 18:
+if idade == 18:
+    print(f"Você precisa se alistar imediatamente!")
+   
+elif idade < 18:
+    saldo = 18 - idade
     print("Você ainda não possui idade suficiente para se alistar")
-    print(f"ainda faltam {idade - 18} anos para o alistaemnto")
-    print(f"Seu alistamento sera em {ano_atual + (idade - 18)} ")
-elif idade == 18:
-    print(f"A hora exata de se alistar, pois você tem {18} anos")
+    print(f"ainda faltam {saldo} anos para o alistaemnto")
+    ano = ano_atual + saldo
+    print(f"Seu alistamento sera em {ano} ")
+
+elif idade > 18:
+    saldo = idade - 18
+    print(f"Ja passou da hora de se alistar, você deviria ter se alistado há {saldo} anos.")
+    ano = ano_atual - saldo
+    print(f"Seu alistamento foi em {ano}")
