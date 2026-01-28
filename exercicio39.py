@@ -9,3 +9,10 @@ ano_atual = date.today().year
 idade = ano_atual - ano_nasc
 
 print(f"Quem nasceu em {ano_nasc} tem {idade} anos ")
+
+if idade < 18:
+    print("Você ainda não possui idade suficiente para se alistar")
+    print(f"ainda faltam {idade - 18} anos para o alistaemnto")
+    print(f"Seu alistamento sera em {ano_atual + (idade - 18)} ")
+elif idade == 18:
+    print(f"A hora exata de se alistar, pois você tem {18} anos")
