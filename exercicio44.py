@@ -4,28 +4,38 @@ print("=-" * 20)
 print("SIMULADOR DE LOJA".center(40))
 print("=-" * 20)
 
-compras = float(input("Preços das compras R$: "))
+preco = float(input("Preço das compras R$: "))
 
-print('''
+print("""
 FORMAS DE PAGAMENTO
-[ 1 ] á vista dinheiro/cheque
-[ 2 ] á vista cartão
-[ 3 ] 2x no cartão
-[ 4 ] 3x ou mais no cartão
-''')
+[ 1 ] À vista dinheiro/cheque (10% desconto)
+[ 2 ] À vista cartão (5% desconto)
+[ 3 ] 2x no cartão (sem juros)
+[ 4 ] 3x ou mais no cartão (20% juros)
+""")
+
 opcao = int(input("Qual é a opção? "))
-avista10 = (compras * 10) / 100
-avista5 = (compras * 5) / 100
-parcelado = (compras * 20) / 100 
-compras = parcelado + compras
 
 if opcao == 1:
-    print(f"Sua compra de R${compras:.2f} vai custar R${compras - avista10:.2f} no final.")
+    total = preco * 0.90
+    print(f"Sua compra de R${preco:.2f} vai custar R${total:.2f} no final.")
+
 elif opcao == 2:
-    print(f"Sua compra de R${compras:.2f} vai custar R${compras - avista5:.2f} no final.")
+    total = preco * 0.95
+    print(f"Sua compra de R${preco:.2f} vai custar R${total:.2f} no final.")
+
 elif opcao == 3:
-    print(f"Sua compra de R${compras} ficou parcelado 2x em {compras / 2}")
+    parcela = preco / 2
+    print(f"Sua compra de R${preco:.2f} ficou 2x de R${parcela:.2f}.")
+
 elif opcao == 4:
-    vezes = int(input("Em quantas vezes você vai pagar?: "))
-    
-    print(f"Sua compra de R${compras:.2f} parcelada em {vezes}x ficou em R${compras / vezes}")
+    vezes = int(input("Em quantas vezes você vai pagar? "))
+    if vezes < 3:
+        print("Número de parcelas inválido.")
+    else:
+        total = preco * 1.20
+        parcela = total / vezes
+        print(f"Sua compra ficou em R${total:.2f} COM JUROS e parcelada em {vezes}x ficou R${parcela:.2f}.")
+
+else:
+    print("Opção inválida.")
