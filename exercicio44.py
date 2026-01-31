@@ -1,5 +1,8 @@
 #Elabore um programa que calcule o valor a ser pago por um produto,
 #considerando o seu preço normal e condição de pagamento.
+print("=-" * 20)
+print("SIMULADOR DE LOJA".center(40))
+print("=-" * 20)
 
 compras = float(input("Preços das compras R$: "))
 
@@ -24,6 +27,5 @@ elif opcao == 3:
     print(f"Sua compra de R${compras} ficou parcelado 2x em {compras / 2}")
 elif opcao == 4:
     vezes = int(input("Em quantas vezes você vai pagar?: "))
-    if vezes == 2:
-        print(opcao)
+    
     print(f"Sua compra de R${compras:.2f} parcelada em {vezes}x ficou em R${compras / vezes}")
