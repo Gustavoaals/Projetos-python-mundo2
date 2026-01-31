@@ -11,14 +11,13 @@ idade = ano_atual - ano_nasc
 
 print (f"Você nasceu em {ano_nasc} e tem {idade} anos ")
 
-if 0 > idade >= 9:
+if idade < 9: # entre 1 ano a 9 anos 
     print("Você está na categoria de: MIRIM.")
-elif idade < 14:
+elif idade < 14: # entre 9 anos e 14 anos
     print("Você está na categoria: INFANTIL.")
-elif 14 > idade < 19: # ERRADO 22 
+elif idade < 19: # entre 14 anos e 19 anos
     print("Você está na categoria JÚNIOR")
-elif 19 > idade <= 25:
+elif idade < 25: # entre 14 anos e 25 anos
     print("Você está na categoria SÊNIOR")
-else :
-    print("Você está na cateforia de MASTER")
-#7 > media >= 5 
+else: # Acima de 25 anos
+    print("Você está na categoria de MASTER")
