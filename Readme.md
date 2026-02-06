@@ -5,9 +5,8 @@ Repositório dedicado aos estudos do **Módulo 2 do curso de Python**, do **Prof
 📚 **Conteúdos estudados:**
 - Estruturas condicionais
 - Operadores relacionais e lógicos
-- Exercícios práticos em Python
-- Desenvolvimento da lógica de programação
+- Loops (For, While)
+- Cores no terminal
 
-🎯 **Objetivo:**  
-Consolidar a base da linguagem Python e evoluir no aprendizado para atuar futuramente como desenvolvedor backend.
- do curso em video de python, do Professor Gustavo Guanabara.
+🎯 Objetivo:
+Consolidar e aprofundar a base da linguagem Python por meio do curso Python do Professor Gustavo Guanabara (Curso em Vídeo), compreendendo desde os fundamentos até conceitos mais avançados da linguagem, com foco em lógica, boas práticas e estrutura de código.
